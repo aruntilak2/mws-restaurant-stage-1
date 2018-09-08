@@ -1,11 +1,12 @@
 const cachename ='v1';
 const cachefiles =[
-    './index.html',
-    './restaurant.html',
-    '/js/dbhelper.js',
+    '/',
+    '../index.html',
+    '../restaurant.html',
+    './js/dbhelper.js',
     './js/main.js',
-    './js/restaturant_info.js',
-    './img/1.jpg',
+    './js/restaurant_info.js',
+    '/img/1.jpg',
     '/img/2.jpg',
     '/img/3.jpg',
     '/img/4.jpg',
