@@ -208,6 +208,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+// SERVICE WORKER
 if('serviceWorker'in navigator){
   window.addEventListener('load', function(){
       navigator.serviceWorker
