@@ -143,11 +143,11 @@ nav h1 a {
   background-color:rgb(51, 151, 219);
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 40px;
+  margin: 5px;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: center;
-  width: 80%;
+  width: 100%;
   border-radius: 35px;
 }
 #restaurants-list .restaurant-img {

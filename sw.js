@@ -15,7 +15,9 @@ const cachefiles =[
     '/img/7.jpg',
     '/img/8.jpg',
     '/img/9.jpg',
-    '/img/10.jpg'
+    '/img/10.jpg',
+    '/data/restaurants.json',
+    '/css/styles.css'
 ];
 self.addEventListener('install', function(e){
     console.log("Installed");
@@ -32,3 +34,27 @@ self.addEventListener('install', function(e){
 self.addEventListener('activate', function(){
     console.log("Activated");
 })
+self.addEventListener('fetch', function(e) {
+    e.respondWith(
+        caches.match(e.request).then(function(response){
+            if (response){
+                console.log(" Got these ", e.request, 'in the cache');
+                return response;
+            }
+            else {
+                console.log("Sorry!", e.request, "nothing to fetch");
+                return fetch(e.request)
+                .then(function(response){
+                    const clonedResponse = response.clone();
+                    caches.open(cachename).then(function(cache){
+                        cache.put(e.request, clonedResponse);
+                    })
+                    return response;
+                })
+                .catch(function(err){
+                    console.log(err);
+                })
+            }
+        })
+    );
+});
