@@ -1,6 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+@media (min-width: 320px) and (max-width: 812px) { 
+  #restaurant-list li .restaurant-img {
+    width: 80%;  
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+  #restaurant-list li .restaurant-img {
+    width: 40%;  
+    display: flex;
+  }
+}
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -150,7 +162,7 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: center;
-  width: 60%;
+  /* width: 100%; */
   border-radius: 35px;
 }
 #restaurants-list .restaurant-img {
@@ -159,8 +171,11 @@ nav h1 a {
   margin: 0;
   max-width: 100%;
   min-height: 248px;
+  min-height: 100%;
   min-width: 100%;
+  width:100%;
 }
+
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -171,6 +186,7 @@ nav h1 a {
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
